@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">MobileDevelopmentAssignmentOne</string>
+    <string name="login_username_label_string">Username</string>
+    <string name="login_username_error_message_empty_string">Username CANNOT empty!</string>
+    <string name="login_username_error_message_too_short_string">Username must more than 5 characters!</string>
+    <string name="login_password_label_string">Password</string>
+    <string name="login_password_error_message_empty_string">Password CANNOT empty!</string>
+    <string name="login_password_error_message_too_short_string">Password must at least 8 characters!</string>
+    <string name="login_password_error_message_too_long_string">Password must not more than 32 characters!</string>
+    <string name="login_login_label_string">Login</string>
+    <string name="login_sign_up_label_string">No account yet? Create one</string>
+    <string name="login_sign_up_message_string">Not Implemented!e</string>
+    <string name="login_failed_message_string">Login Failed!</string>
+    <string name="login_Success_message_string">Login Success!</string>
 </resources>

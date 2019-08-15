@@ -8,4 +8,15 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="LoginButtonStyle" parent="Theme.MaterialComponents">
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginLeft">10sp</item>
+        <item name="android:layout_marginTop">50sp</item>
+        <item name="android:layout_marginRight">10sp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/design_default_color_on_primary</item>
+        <item name="android:background">@color/colorButtonBackground</item>
+    </style>
+
 </resources>
