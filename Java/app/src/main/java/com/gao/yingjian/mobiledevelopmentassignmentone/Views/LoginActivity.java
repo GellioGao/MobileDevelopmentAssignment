@@ -141,6 +141,7 @@ public class LoginActivity extends ActivityBase {
 
     private void onLoginSuccess(){
         Log.d(TAG, "Login Success");
+        jumpTo(HomeNavigationDrawerActivity.class);
     }
 
     private void onLoginFailed(){

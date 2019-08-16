@@ -7,6 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".Views.LoginActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130sp"
+        android:textSize="48sp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/login_app_title_string"
+        />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilUsername"
         android:layout_width="match_parent"
@@ -14,7 +25,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_marginLeft="10sp"
-        android:layout_marginTop="200sp"
+        android:layout_marginTop="300sp"
         android:layout_marginRight="10sp"
         app:endIconMode="clear_text"
         android:hint="@string/login_username_label_string"

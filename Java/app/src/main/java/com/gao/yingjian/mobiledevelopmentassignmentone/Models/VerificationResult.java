@@ -6,7 +6,7 @@ public class VerificationResult {
     boolean valid;
     ArrayList<Integer> messageIDList;
     public VerificationResult(){
-        this(true, null);
+        this(true);
     }
     public VerificationResult(boolean valid, Integer... ids){
         this.valid = valid;

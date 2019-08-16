@@ -8,6 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="ToolBarStyle" parent="Theme.MaterialComponents">
+        <item name="android:background">@color/colorButtonBackground</item>
+    </style>
+
     <style name="LoginButtonStyle" parent="Theme.MaterialComponents">
         <item name="android:layout_alignParentLeft">true</item>
         <item name="android:layout_alignParentRight">true</item>
@@ -18,5 +22,14 @@
         <item name="android:textColor">@color/design_default_color_on_primary</item>
         <item name="android:background">@color/colorButtonBackground</item>
     </style>
+
+    <style name="NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

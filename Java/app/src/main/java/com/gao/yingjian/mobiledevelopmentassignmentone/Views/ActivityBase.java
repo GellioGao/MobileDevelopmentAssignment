@@ -1,5 +1,6 @@
 package com.gao.yingjian.mobiledevelopmentassignmentone.Views;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.ProgressBar;
 
@@ -39,5 +40,11 @@ public class ActivityBase extends AppCompatActivity {
         for (View view: views) {
             view.setEnabled(true);
         }
+    }
+
+    protected void jumpTo(Class<?> cls){
+        Intent intent = new Intent(this, cls);
+
+        startActivity(intent);
     }
 }

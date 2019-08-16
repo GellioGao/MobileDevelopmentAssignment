@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">MobileDevelopmentAssignmentOne</string>
+
+    <string name="login_app_title_string">Just Survey</string>
     <string name="login_username_label_string">Username</string>
     <string name="login_username_error_message_empty_string">Username CANNOT empty!</string>
     <string name="login_username_error_message_too_short_string">Username must more than 5 characters!</string>
@@ -12,4 +14,17 @@
     <string name="login_sign_up_message_string">Not Implemented!e</string>
     <string name="login_failed_message_string">Login Failed!</string>
     <string name="login_Success_message_string">Login Success!</string>
+
+    <string name="home_welcome_message_label_string">Welcome to Just Survey!</string>
+    <string name="home_bottom_navigation_recent_title_name">Recent</string>
+    <string name="home_bottom_navigation_home_title_name">Home</string>
+    <string name="home_bottom_navigation_notification_title_name">Notification</string>
+    <string name="home_tool_bar_help_title_name">Help</string>
+    <string name="home_tool_bar_settings_title_name">Settings</string>
+    <string name="home_tool_bar_about_title_name">About</string>
+    <string name="home_navigation_view_item_logout_title_name">Logout</string>
+    <string name="title_activity_home_navigation_drawer">Just Survey</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
 </resources>
