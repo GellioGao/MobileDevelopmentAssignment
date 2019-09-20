@@ -23,8 +23,12 @@
     <string name="home_tool_bar_settings_title_name">Settings</string>
     <string name="home_tool_bar_about_title_name">About</string>
     <string name="home_navigation_view_item_logout_title_name">Logout</string>
+    <string name="home_navigation_view_item_clear_logged_in_users_title_name">Clear Logged In Users</string>
     <string name="title_activity_home_navigation_drawer">Just Survey</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_survey_detail">Survey Detail</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 
 </resources>
