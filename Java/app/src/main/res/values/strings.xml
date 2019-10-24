@@ -28,7 +28,9 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="title_activity_survey_detail">Survey Detail</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="survey_detail_done_button_text">Done</string>
+
+    <string name="submission_title_string">You can submit the survey here.</string>
+    <string name="submission_submit_button_text">Submit</string>
 
 </resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Views.SubmissionActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/submission_title_string"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <at.grabner.circleprogress.CircleProgressView
+        android:id="@+id/clvSubmissionProgress"
+        android:layout_width="277dp"
+        android:layout_height="277dp"
+        android:layout_gravity="center"
+        app:cpv_autoTextSize="true"
+        app:cpv_barColor="@color/primary"
+        app:cpv_barWidth="35dp"
+        app:cpv_innerContourSize="0dp"
+        app:cpv_maxValue="100"
+        app:cpv_outerContourSize="0dp"
+        app:cpv_rimColor="@color/primary_light"
+        app:cpv_rimWidth="35dp"
+        app:cpv_seekMode="true"
+        app:cpv_showUnit="true"
+        app:cpv_spinColor="@color/primary"
+        app:cpv_textColor="@color/primary_dark"
+        app:cpv_textScale="1"
+        app:cpv_unit="%"
+        app:cpv_unitColor="@color/primary_light"
+        app:cpv_unitPosition="right_top"
+        app:cpv_unitScale="1"
+        app:cpv_value="0"
+        android:visibility="invisible"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmitSurvey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/submission_submit_button_text"
+        style="@style/SubmitButtonStyle"
+        android:onClick="submitSurvey"
+        />
+</LinearLayout>

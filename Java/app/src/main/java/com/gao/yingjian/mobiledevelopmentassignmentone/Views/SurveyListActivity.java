@@ -8,7 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.gao.yingjian.mobiledevelopmentassignmentone.Adapters.SurveyListAdapter;
-import com.gao.yingjian.mobiledevelopmentassignmentone.DAOs.SurveyDetailInfo;
+import com.gao.yingjian.mobiledevelopmentassignmentone.Models.SurveyDetailInfo;
 import com.gao.yingjian.mobiledevelopmentassignmentone.R;
 import com.gao.yingjian.mobiledevelopmentassignmentone.ViewModels.SurveyListViewModel;
 
@@ -31,16 +31,15 @@ public class SurveyListActivity extends ActivityBase {
 
         mViewModel = ViewModelProviders.of(this).get(SurveyListViewModel.class);
 
-        username = getIntent().getStringExtra("user");
+        username = getIntent().getStringExtra(HomeNavigationDrawerActivity.INTENT_EXTRA_USER);
         ltvSurveyList = findViewById(R.id.ltvSurveyList);
-        ltvSurveyList.setAdapter(new SurveyListAdapter(getLayoutInflater(), mViewModel.getSurveyList()));
+        ltvSurveyList.setAdapter(new SurveyListAdapter(getLayoutInflater(), mViewModel.getSurveyList(this)));
         ltvSurveyList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
                 SurveyDetailInfo surveyInfo = mViewModel.selectedSurvey(i, username);
                 HashMap<String, String> map = new HashMap<>();
-                map.put("SurveyId", surveyInfo.getSurveyId());
+                map.put(SurveyDetailActivity.INTENT_EXTRA_SURVEY_ID, surveyInfo.getSurveyId());
                 Map.Entry<String, String>[] entries = new Map.Entry[map.size()];
                 map.entrySet().toArray(entries);
                 jumpTo(SurveyDetailActivity.class, entries);

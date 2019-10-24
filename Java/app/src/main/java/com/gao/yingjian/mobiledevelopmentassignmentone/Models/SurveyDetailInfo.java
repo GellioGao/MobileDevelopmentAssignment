@@ -1,10 +1,10 @@
-package com.gao.yingjian.mobiledevelopmentassignmentone.DAOs;
+package com.gao.yingjian.mobiledevelopmentassignmentone.Models;
 
 import org.litepal.crud.LitePalSupport;
 
 import java.util.Date;
 
-public class SurveyDetailInfo extends LitePalSupport {
+public class SurveyDetailInfo {
     private String surveyId;
     private String surveyName;
     private String surveyDescription;

@@ -8,8 +8,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.gao.yingjian.mobiledevelopmentassignmentone.Models.SurveyDetail;
+import com.gao.yingjian.mobiledevelopmentassignmentone.Models.SurveyDetailGroup;
 import com.gao.yingjian.mobiledevelopmentassignmentone.R;
-import com.gao.yingjian.mobiledevelopmentassignmentone.Views.PlaceholderFragment;
+import com.gao.yingjian.mobiledevelopmentassignmentone.Views.SurveyDetailFragment;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
@@ -17,31 +19,34 @@ import com.gao.yingjian.mobiledevelopmentassignmentone.Views.PlaceholderFragment
  */
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-    @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2};
     private final Context mContext;
 
-    public SectionsPagerAdapter(Context context, FragmentManager fm) {
+    private SurveyDetail detail;
+
+    public SectionsPagerAdapter(Context context, SurveyDetail detail, FragmentManager fm) {
         super(fm);
         mContext = context;
+        this.detail = detail;
     }
 
     @Override
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
-        return PlaceholderFragment.newInstance(position + 1);
+        // Return a SurveyDetailFragment (defined as a static inner class below).
+        SurveyDetailGroup group = detail.getSurveyDetailGroups().get(position);
+        SurveyDetailFragment fragment = SurveyDetailFragment.newInstance(group.getGroupName());
+        fragment.setSurveyDetailGroup(detail.getDetailInfo().getSurveyId(), group);
+        return fragment;
     }
 
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return mContext.getResources().getString(TAB_TITLES[position]);
+        return detail.getSurveyDetailGroups().get(position).getGroupName();
     }
 
     @Override
     public int getCount() {
-        // Show 2 total pages.
-        return 2;
+        return detail.getSurveyDetailGroups().size();
     }
 }

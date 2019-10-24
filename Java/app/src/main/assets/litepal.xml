@@ -35,7 +35,7 @@
         <mapping class="com.gao.yingjian.mobiledevelopmentassignmentone.DAOs.LogInfo" />
         <mapping class="com.gao.yingjian.mobiledevelopmentassignmentone.DAOs.RecentSurvey" />
         <mapping class="com.gao.yingjian.mobiledevelopmentassignmentone.DAOs.NotificationInfo" />
-        <mapping class="com.gao.yingjian.mobiledevelopmentassignmentone.DAOs.SurveyDetailInfo" />
+        <mapping class="com.gao.yingjian.mobiledevelopmentassignmentone.DAOs.SurveyDetailItemInfo" />
     </list>
 
     <!--

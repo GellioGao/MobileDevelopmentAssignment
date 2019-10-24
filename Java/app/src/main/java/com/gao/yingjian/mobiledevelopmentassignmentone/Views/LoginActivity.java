@@ -163,7 +163,7 @@ public class LoginActivity extends ActivityBase {
         tiePassword.setText("");
         saveLastLoginUser(result.getUser().getUsername());
         HashMap<String, String> map = new HashMap<>();
-        map.put("user", result.getUser().getFirstName());
+        map.put(HomeNavigationDrawerActivity.INTENT_EXTRA_USER, result.getUser().getFirstName());
         Map.Entry<String, String>[] entries = new Map.Entry[map.size()];
         map.entrySet().toArray(entries);
         jumpTo(HomeNavigationDrawerActivity.class, entries);
@@ -181,7 +181,7 @@ public class LoginActivity extends ActivityBase {
     }
 
     private String getLastLoginUser(){
-        LogInfo info = LitePal.order("lastLoginTime").findFirst(LogInfo.class);
+        LogInfo info = LitePal.order("lastLoginTime").findLast(LogInfo.class);
         if(info == null){
             return null;
         }

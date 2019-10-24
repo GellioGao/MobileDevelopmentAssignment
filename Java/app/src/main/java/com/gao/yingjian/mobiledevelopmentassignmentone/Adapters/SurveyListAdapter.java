@@ -1,14 +1,17 @@
 package com.gao.yingjian.mobiledevelopmentassignmentone.Adapters;
 
 import android.annotation.SuppressLint;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.gao.yingjian.mobiledevelopmentassignmentone.DAOs.SurveyDetailInfo;
+import com.gao.yingjian.mobiledevelopmentassignmentone.Models.SurveyDetailInfo;
 import com.gao.yingjian.mobiledevelopmentassignmentone.R;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 
@@ -17,6 +20,8 @@ public class SurveyListAdapter extends BaseAdapter {
     private ArrayList<SurveyDetailInfo> surveyInfos;
 
     public SurveyListAdapter(LayoutInflater layoutInflater, ArrayList<SurveyDetailInfo> surveyInfos) {
+        super();
+
         this.layoutInflater = layoutInflater;
         this.surveyInfos = surveyInfos;
     }

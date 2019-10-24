@@ -9,10 +9,11 @@
         android:roundIcon="@drawable/just_survey_icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".Views.SubmissionActivity"></activity>
         <activity
             android:name=".Views.SurveyDetailActivity"
             android:label="@string/title_activity_survey_detail"
-            android:theme="@style/NoActionBar"></activity>
+            android:theme="@style/NoActionBar" />
         <activity android:name=".Views.SurveyListActivity" />
         <activity
             android:name=".Views.HomeNavigationDrawerActivity"

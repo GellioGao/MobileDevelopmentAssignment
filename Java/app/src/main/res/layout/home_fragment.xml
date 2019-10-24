@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     tools:context=".Views.HomeFragment">
     <LinearLayout
         android:id="@+id/lltWelcome"
@@ -18,6 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/home_welcome_message_label_string"
+            android:layout_marginLeft="10dp"
             android:layout_marginBottom="20dp"
             android:textSize="30dp"
             />
@@ -25,6 +27,7 @@
             android:id="@+id/txvWelcomeUserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_marginBottom="20dp"
             android:textSize="25dp"
             android:text="Yingjian"
@@ -35,8 +38,8 @@
         android:id="@+id/gdvTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:numColumns="auto_fit"
-        android:layout_gravity="center"
+        android:numColumns="1"
+        android:layout_gravity="center_horizontal"
         >
     </GridView>
 

@@ -30,6 +30,7 @@ import java.util.ArrayList;
 
 public class HomeNavigationDrawerActivity extends ActivityBase
         implements NavigationView.OnNavigationItemSelectedListener, BottomNavigationView.OnNavigationItemSelectedListener {
+    public static final String INTENT_EXTRA_USER ="user";
     private static final String TAG = "HomeNavigationDrawerActivity";
 
     private BottomNavigationView bottomNavigationView;
@@ -86,7 +87,7 @@ public class HomeNavigationDrawerActivity extends ActivityBase
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-        username = getIntent().getStringExtra("user");
+        username = getIntent().getStringExtra(INTENT_EXTRA_USER);
     }
 
     @Override

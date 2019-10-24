@@ -2,13 +2,14 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="80dp">
+    android:layout_height="80dp"
+    android:layout_margin="5dp"
+    >
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginEnd="0dp"
-        android:layout_toStartOf="@+id/recentMenuItemDate"
+        android:layout_toStartOf="@+id/listViewTitleDateItemDate"
         android:layout_alignParentLeft="true"
         android:paddingStart="5dp"
         android:orientation="vertical">

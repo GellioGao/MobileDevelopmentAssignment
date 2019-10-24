@@ -50,12 +50,22 @@ public class ActivityBase extends AppCompatActivity {
     }
 
     protected void jumpTo(Class<?> cls, Map.Entry<String,String>... parameters){
+        Intent intent = getIntent(cls, parameters);
+        startActivity(intent);
+    }
+
+    protected void jumpTo(Class<?> cls, int requestCode, Map.Entry<String,String>... parameters){
+        Intent intent = getIntent(cls, parameters);
+        startActivityForResult(intent, requestCode);
+    }
+
+    private Intent getIntent(Class<?> cls, Map.Entry<String, String>[] parameters) {
         Intent intent = new Intent(this, cls);
-        if(parameters != null){
-            for(Map.Entry<String,String> para : parameters) {
+        if (parameters != null) {
+            for (Map.Entry<String, String> para : parameters) {
                 intent.putExtra(para.getKey(), para.getValue());
             }
         }
-        startActivity(intent);
+        return intent;
     }
 }
